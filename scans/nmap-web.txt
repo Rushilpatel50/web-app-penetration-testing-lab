@@ -1,0 +1,35 @@
+# Nmap 7.95 scan initiated Thu May 21 14:36:37 2026 as: /usr/lib/nmap/nmap --privileged -sV -p 80,8180,3306 --script=http-headers,http-methods,http-title -oN /home/kali/web-app-pentest-lab/scans/nmap-web.txt 192.168.56.129
+Nmap scan report for 192.168.56.129
+Host is up (0.00031s latency).
+
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+|_http-title: Metasploitable2 - Linux
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+| http-headers: 
+|   Date: Thu, 21 May 2026 18:37:13 GMT
+|   Server: Apache/2.2.8 (Ubuntu) DAV/2
+|   X-Powered-By: PHP/5.2.4-2ubuntu5.10
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+3306/tcp open  mysql   MySQL 5.0.51a-3ubuntu5
+8180/tcp open  http    Apache Tomcat/Coyote JSP engine 1.1
+| http-headers: 
+|   Server: Apache-Coyote/1.1
+|   Content-Type: text/html;charset=ISO-8859-1
+|   Date: Thu, 21 May 2026 18:37:13 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Apache Tomcat/5.5
+|_http-server-header: Apache-Coyote/1.1
+MAC Address: 00:0C:29:08:40:3F (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 21 14:37:06 2026 -- 1 IP address (1 host up) scanned in 28.10 seconds

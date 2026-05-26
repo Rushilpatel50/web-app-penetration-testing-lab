@@ -1,0 +1,7 @@
+user_id,user,avatar,password,last_name,first_name
+1,admin,http://192.168.56.129/dvwa/hackable/users/admin.jpg,5f4dcc3b5aa765d61d8327deb882cf99 (password),admin,admin
+2,gordonb,http://192.168.56.129/dvwa/hackable/users/gordonb.jpg,e99a18c428cb38d5f260853678922e03 (abc123),Brown,Gordon
+3,1337,http://192.168.56.129/dvwa/hackable/users/1337.jpg,8d3533d75ae2c3966d7e0d4fcc69216b (charley),Me,Hack
+4,pablo,http://192.168.56.129/dvwa/hackable/users/pablo.jpg,0d107d09f5bbe40cade3de5c71e9e9b7 (letmein),Picasso,Pablo
+5,smithy,http://192.168.56.129/dvwa/hackable/users/smithy.jpg,5f4dcc3b5aa765d61d8327deb882cf99 (password),Smith,Bob
+

