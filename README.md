@@ -298,13 +298,6 @@ Stored XSS + missing HttpOnly flag + no session regeneration:
 
 ## 📸 Screenshots
 
-### Lab Setup
-| Screenshot | Description |
-|------------|-------------|
-| ![Lab Network](screenshots/lab-setup/01-vmware-network-editor.png) | VMware Host-Only network isolation |
-| ![Ping Success](screenshots/lab-setup/06-ping-success.png) | Lab connectivity verified |
-| ![DVWA Setup](screenshots/lab-setup/08-dvwa-database-setup.png) | DVWA database initialized |
-
 ### SQL Injection
 | Screenshot | Description |
 |------------|-------------|
@@ -318,23 +311,22 @@ Stored XSS + missing HttpOnly flag + no session regeneration:
 |------------|-------------|
 | ![XSS Alert](screenshots/xss-reflected/02-alert-popup.png) | Reflected XSS popup confirmed |
 | ![Cookie Stolen](screenshots/xss-reflected/04-cookie-theft-simulation.png) | Session cookie exposed via XSS |
-| ![Stored Persists](screenshots/xss-stored/03-alert-on-refresh.png) | Stored XSS fires on every page load |
-| ![Char Bypass](screenshots/xss-stored/06-burp-bypass-charlimit.png) | Client maxlength bypassed via Burp |
+| ![Stored Persists](screenshots/xss-stored/02-payload-submitted.png) | Stored XSS fires on every page load |
+| ![Char Bypass](screenshots/xss-stored/03-burp-bypass-charlimit.png) | Client maxlength bypassed via Burp |
 
 ### Authentication & Session
 | Screenshot | Description |
 |------------|-------------|
 | ![Intruder](screenshots/weak-auth/07-intruder-attack-results.png) | Password found via response length |
 | ![Hydra](screenshots/weak-auth/09-hydra-success.png) | Hydra CLI brute force success |
-| ![No Lockout](screenshots/weak-auth/10-no-lockout.png) | No lockout after multiple failures |
 | ![JS Cookie](screenshots/cookies/03-javascript-cookie-access.png) | Session cookie readable via JS |
 | ![Hijack POC](screenshots/cookies/10-session-hijack-poc.png) | Account accessed without credentials |
 
 ### Automated Scan
 | Screenshot | Description |
 |------------|-------------|
-| ![ZAP Alerts](screenshots/recon/10-zap-alerts-overview.png) | OWASP ZAP findings overview |
-| ![ZAP SQLi](screenshots/recon/11-zap-sqli-alert-detail.png) | ZAP independently confirms SQLi |
+| ![ZAP Alerts](screenshots/recon/05-zap-alerts-overview.png) | OWASP ZAP findings overview |
+| ![ZAP SQLi](screenshots/recon/06-zap-sqli-alert-detail.png) | ZAP independently confirms SQLi |
 
 ---
 
@@ -430,8 +422,7 @@ web-app-pentest-lab/
 
 ```
 IMPORTANT — READ BEFORE USE
-This project was conducted exclusively within a self-contained
-isolated VMware lab environment for educational purposes.
+This project was conducted exclusively within a self-contained isolated VMware lab environment for educational purposes.
 ✅ All systems tested are owned and operated by the tester
 ✅ Network is VMware Host-Only — zero internet connectivity
 ✅ No real systems, public IPs, or third-party services involved
@@ -440,10 +431,8 @@ isolated VMware lab environment for educational purposes.
 ❌ Do NOT use these techniques against systems you do not own
 ❌ Do NOT use these techniques without explicit written authorization
 ❌ Unauthorized penetration testing is illegal in most jurisdictions
-The techniques documented here are for educational understanding
-of web application security and defensive practices only.
-For legal penetration testing, always obtain written authorization
-before testing any system.
+The techniques documented here are for educational understanding of web application security and defensive practices only.
+For legal penetration testing, always obtain written authorization before testing any system.
 ```
 
 ---
