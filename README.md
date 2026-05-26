@@ -73,6 +73,7 @@ The project covers the full penetration testing lifecycle:Reconnaissance → Man
 
 ## 🏗️ Lab Architecture
 
+```
 ┌─────────────────────────────────────────────────┐
 │            VMware Host-Only Network             │
 │                 192.168.56.0/24                 │
@@ -93,7 +94,7 @@ The project covers the full penetration testing lifecycle:Reconnaissance → Man
 │   ════════════ FULLY ISOLATED ═════════════════ │
 │          Zero internet connectivity             │
 └─────────────────────────────────────────────────┘
-
+```
 
 ### Host Machine Specs
 - **CPU:** AMD Ryzen 7 4800H
@@ -139,7 +140,7 @@ This assessment followed the **OWASP Testing Guide v4.2** and
 **PTES (Penetration Testing Execution Standard)**.
 
 ### Testing Approach
-
+```
 Phase 1 ── Reconnaissance
 └── Nmap: basic → version → aggressive → web-targeted scans
 Identified 10+ open services, OS fingerprint, web stackPhase 2 ── DVWA Configuration
@@ -157,6 +158,7 @@ Compared results against manual findingsPhase 6 ── Documentation
 └── Professional report with CVSS scores,
 OWASP mapping, evidence references,
 developer-actionable remediation
+```
 
 ### Key Principle — Manual Before Automated
 Every vulnerability was manually confirmed before running
@@ -183,6 +185,7 @@ confirmed exploitability across multiple injection types
 -- Payload used to dump all credentials:
 1' UNION SELECT user,password FROM users -- --- Result: admin:5f4dcc3b5aa765d61d8327deb882cf99
 --         (MD5 hash of 'password')
+```
 
 **Fix:** Parameterized queries / prepared statements.
 
@@ -202,6 +205,7 @@ bypass using the `onerror` event handler on an `img` tag.
 <!-- Cookie theft payload: -->
 <script>alert(document.cookie)</script><!-- Filter bypass: -->
 <img src=x onerror=alert('XSS')>
+```
 
 **Fix:** `htmlspecialchars()` output encoding + Content Security Policy.
 
@@ -270,6 +274,7 @@ Set-Cookie: PHPSESSID=abc123; path=/
 
 ### Critical Attack Chain
 
+```
 The most significant finding was the combination of
 Stored XSS + missing HttpOnly flag + no session regeneration:
 ① Attacker submits XSS payload to guestbook
@@ -287,6 +292,8 @@ Stored XSS + missing HttpOnly flag + no session regeneration:
 ⑦ SQLi used to dump entire database
 ↓
 ⑧ Complete application compromise — no password needed
+```
+
 ---
 
 ## 📸 Screenshots
@@ -384,6 +391,8 @@ echo htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
 ---
 
 ## 📂 Repository Structure
+
+```
 web-app-pentest-lab/
 │
 ├── README.md                          ← You are here
@@ -413,11 +422,13 @@ web-app-pentest-lab/
 ├── methodology.md                ← Detailed methodology
 ├── findings-summary.md           ← Findings table
 └── evidence-index.md             ← Screenshot mapping
+```
 
 ---
 
 ## ⚖️ Legal Disclaimer
 
+```
 IMPORTANT — READ BEFORE USE
 This project was conducted exclusively within a self-contained
 isolated VMware lab environment for educational purposes.
@@ -433,6 +444,7 @@ The techniques documented here are for educational understanding
 of web application security and defensive practices only.
 For legal penetration testing, always obtain written authorization
 before testing any system.
+```
 
 ---
 
