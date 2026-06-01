@@ -64,7 +64,7 @@ The project covers the full penetration testing lifecycle:Reconnaissance → Man
 | High Severity | 3 |
 | Testing Phases Completed | 9 |
 | Tools Used | 6 |
-| Screenshots Collected | 79 |
+| Screenshots Collected | 58 |
 | Report Pages | 15+ |
 
 ---
