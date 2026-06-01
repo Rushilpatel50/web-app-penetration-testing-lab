@@ -1,0 +1,29 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.log
+*.bak
+
+# Large files
+*.pcap
+*.cap
+*.zip
+*.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+
+# Backup archives
+*-backup.tar.gz
