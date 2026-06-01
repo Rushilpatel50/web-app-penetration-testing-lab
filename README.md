@@ -400,7 +400,6 @@ web-app-pentest-lab/
 │   └── sqlmap-output/                ← SQLMap findings
 │
 ├── screenshots/
-│   ├── lab-setup/                    ← 14 setup screenshots
 │   ├── recon/                        ← 14 recon screenshots
 │   ├── sqli/                         ← 13 SQLi screenshots
 │   ├── xss-reflected/                ← 10 reflected XSS
