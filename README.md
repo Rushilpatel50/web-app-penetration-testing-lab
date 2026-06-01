@@ -1,5 +1,3 @@
-# Web Application Penetration Testing Lab
-
 > Authorized penetration testing project conducted in an isolated VMware lab environment.
 > All testing was performed on intentionally vulnerable systems owned and operated by the tester.
 
@@ -449,5 +447,12 @@ For legal penetration testing, always obtain written authorization before testin
 
 ---
 
-*Conducted in isolated lab — for educational purposes only*
+## 👤 Author
 
+**Rushil Patel**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Rushilpatel50-181717?logo=github)](https://github.com/Rushilpatel50)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin)](https://linkedin.com/in/rushil-patel-998669402/)
+
+---
+*Conducted in isolated lab — for educational purposes only*
